@@ -28,7 +28,9 @@ theme = Hacktober
 # # separated by equals signs.
  font-family = JetBrainsMono
  window-padding-x = 10
+ font-size = 14
 #
+
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
 # key=value

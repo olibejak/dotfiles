@@ -12,6 +12,10 @@ right_format = """$cmd_duration$sudo"""
 [character]
 success_symbol = '[󰣇](bold blue)'
 error_symbol = '[󰣇](bold red)'
+vimcmd_symbol = '[󰣇](bold green)'
+vimcmd_replace_one_symbol = '[󰣇](bold yellow)'
+vimcmd_replace_symbol = '[󰣇](bold yellow)'
+vimcmd_visual_symbol = '[󰣇](bold purple)'
 
 [aws]
 symbol = " "

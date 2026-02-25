@@ -17,3 +17,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Init starship
 eval "$(starship init zsh)"
+
+# Vim motions
+bindkey -v
