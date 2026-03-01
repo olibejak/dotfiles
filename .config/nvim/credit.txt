@@ -1,0 +1,2 @@
+github.com/nvim-lua/kickstart.nvim
+github.com/hendrikmi/neovim-kickstart-config

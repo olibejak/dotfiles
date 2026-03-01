@@ -1,0 +1,14 @@
+vim.wo.number = true -- Set line numbers
+vim.o.relativenumber = true -- Set relative numbered lines
+vim.o.clipboard = 'unnamedplus' -- Sync clipboard
+vim.o.wrap = false -- Wrap lines
+vim.o.linebreak = true -- Split words
+vim.o.mouse = 'a' -- Mouse mode
+vim.autoindent = true -- Copy indent from current line when starting new one
+vim.o.ignorecase = true -- Ignore case when searching (\C for case-sensitive)
+vim.o.smartcase = true -- Smart case
+vim.o.shiftwidth = 4 -- Number of spaces inserted for each indention
+vim.o.tabstop = 4 -- Number of spaces inserted after a tab
+vim.o.softtabstop = 4 -- Number of spaces a cursor moves right after a tab
+vim.o.expandtab = true -- Convert tabs for spaces
+vim.opt.termguicolors = true

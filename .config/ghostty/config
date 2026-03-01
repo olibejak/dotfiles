@@ -21,6 +21,12 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
+# BG transparecy -- 0.0 (fully transparent) - 1.0
+background-opacity = 0.85
+
+# BG Blur
+# background-blur-radius = 20
+
 theme = Hacktober
 # Config syntax crash course
 # ==========================
