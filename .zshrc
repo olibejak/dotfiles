@@ -20,3 +20,6 @@ eval "$(starship init zsh)"
 
 # Vim motions
 bindkey -v
+
+alias ls='eza --icons=always --group-directories-first'
+alias ll='eza -alh --icons=always --group-directories-first'

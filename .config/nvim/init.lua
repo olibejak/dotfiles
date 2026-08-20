@@ -35,6 +35,7 @@ require('lazy').setup({
   require 'plugins.autocompletion',
   require 'plugins.gitsigns',
   require 'plugins.indent-blankline',
+  require 'plugins.surround',
 
   {
     -- Detect tabstop and shiftwidth automatically

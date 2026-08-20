@@ -1,0 +1,6 @@
+[sie][Deesser#0]
+detection=1
+f1Freq=3200
+f2Freq=5500
+f2Q=3
+threshold=-24
