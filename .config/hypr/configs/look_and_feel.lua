@@ -49,7 +49,7 @@ hl.curve("workspaceSlide", { type = "bezier", points = { {0.8, 0.9}, {0.8, 1.0} 
 hl.animation({ leaf = "windows", enabled = true, speed = 5, bezier = "default", style = "slidevert" })
 hl.animation({ leaf = "border", enabled = true, speed = 5, bezier = "default" })
 hl.animation({ leaf = "fade", enabled = true, speed = 5, bezier = "default" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "def" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "workspaceSlide" })
 hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3, bezier = "workspaceSlide", style = "slidevert" })
 -- hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 1, bezier = "default", style = "fade" })
 
