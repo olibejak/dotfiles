@@ -2,7 +2,7 @@
 --- LOOK AND FEEL ---
 -----------------------
 
--- NERV Evangelion Theme
+-- Synthwave theme 
 
 hl.config({
     general = {
@@ -10,16 +10,16 @@ hl.config({
         gaps_in = 4,
         gaps_out = 2,
         col = {
-            active_border = { colors = {"rgba(e60026ee)", "rgba(cc0000ee)"}, angle = 45 },
+            active_border = { colors = {"rgba(8b00ffee)", "rgba(4b0082ee)", "rgba(8b00ffee)"}, angle = 50 },
             inactive_border = "rgba(222222aa)",
         },
         layout = "dwindle",
     },
 
     decoration = {
-        rounding = 2,
+        rounding = 25,
         dim_inactive = false,
-        active_opacity = 0.99,
+        active_opacity = 0.998,
         inactive_opacity = 0.95,
         
         blur = {
@@ -44,12 +44,16 @@ hl.config({
     },
 })
 
-hl.curve("nerv", { type = "bezier", points = { {0.2, 0.9}, {0.3, 1.1} } })
+hl.curve("workspaceSlide", { type = "bezier", points = { {0.8, 0.9}, {0.8, 1.0} } })
 
-hl.animation({ leaf = "windows", enabled = true, speed = 5, bezier = "nerv", style = "slide" })
+hl.animation({ leaf = "windows", enabled = true, speed = 5, bezier = "default", style = "slidevert" })
 hl.animation({ leaf = "border", enabled = true, speed = 5, bezier = "default" })
-hl.animation({ leaf = "fade", enabled = true, speed = 5, bezier = "nerv" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "nerv" })hl.config({
+hl.animation({ leaf = "fade", enabled = true, speed = 5, bezier = "default" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "def" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3, bezier = "workspaceSlide", style = "slidevert" })
+-- hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 1, bezier = "default", style = "fade" })
+
+hl.config({
     dwindle = {
         -- pseudotile = true,
         preserve_split = true,

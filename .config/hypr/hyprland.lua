@@ -25,7 +25,7 @@ hl.monitor({
 
 -- See https://wiki.hyprland.org/Configuring/Keywords/
 
--- local terminal = "ghostty"
+-- local termin = "ghostty"
 -- local fileManager = "dolphin"
 -- local appMenu = "wofi --show drun"
 -- local browser = "firefox"

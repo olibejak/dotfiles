@@ -10,7 +10,7 @@ hl.bind(mainMod .. " + F10", hl.dsp.exec_cmd("hyprctl keyword monitor DP-1, 1920
 hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd("hyprctl keyword monitor DP-1, 1920x1080@144, 0x0, 1"))
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("hyprctl keyword monitor DP-1, 1920x1080@165, 0x0, 1"))
 
--- Example binds 
+-- Main binds
 hl.bind(mainMod .. " + Q",         hl.dsp.exec_cmd(vars.terminal))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exit())
@@ -71,8 +71,8 @@ hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e+1" }))
 
 -- Workspaces 1-10 
 for i = 1, 10 do
@@ -80,3 +80,6 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. key,           hl.dsp.focus({ workspace = i }))
     hl.bind(mainMod .. " + SHIFT + " .. key,   hl.dsp.window.move({ workspace = i }))
 end
+
+-- toggle opacity for the focused window
+hl.bind(mainMod .. " + O", hl.dsp.window.set_prop({ prop = "opaque", value = "toggle" }))

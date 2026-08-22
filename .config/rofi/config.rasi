@@ -1,2 +1,118 @@
 
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+configuration {
+    modi: "drun,run,window,filebrowser";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    window-format: "{w} · {c} · {t}";
+    font: "JetBrains Mono 16";
+    
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    display-filebrowser: "Files";
+}
+
+* {
+    bg-color: #0f0f0f;
+    bg-input: #1a1a1a;
+    fg-main: #e60026;
+    fg-normal: #ff4a4a;
+    border-color: #e60026;
+    border-focus: #ff1f1f;
+    sel-bg: #e60026;
+    sel-fg: #0f0f0f;
+    transparent: rgba(0, 0, 0, 0);
+}
+
+window {
+    width: 30%;
+    height: 50%;
+    background-color: @bg-color;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+mainbox {
+    background-color: @transparent;
+    children: [ inputbar, listview, mode-switcher ];
+}
+
+mode-switcher {
+    background-color: @transparent;
+    spacing: 10px;
+    margin: 10px 0px 0px 0px;
+}
+
+button {
+    padding: 6px;
+    background-color: @bg-input;
+    text-color: @fg-normal;
+    border-radius: 2px;
+    border: 1px;
+    border-color: @border-color;
+}
+
+button selected {
+    background-color: @sel-bg;
+    text-color: @sel-fg;
+    border-color: @sel-bg;
+}
+
+inputbar {
+    background-color: @bg-input;
+    text-color: @fg-main;
+    border: 1px;
+    border-color: @border-color;
+    padding: 8px;
+    margin: 0px 0px 8px 0px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: @transparent;
+    text-color: @fg-main;
+    padding: 0px 8px 0px 0px;
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @fg-main;
+    placeholder: "search the app and select, drun";
+    placeholder-color: @fg-normal;
+}
+
+listview {
+    background-color: @transparent;
+    columns: 1;
+    scrollbar: false;
+    spacing: 2px;
+    border: 0px;
+}
+
+element {
+    background-color: @transparent;
+    text-color: @fg-normal;
+    padding: 6px;
+    border: 0px;
+    border-radius: 2px;
+}
+
+element selected {
+    background-color: @sel-bg;
+    text-color: @sel-fg;
+}
+
+element-icon {
+    background-color: inherit;
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+}

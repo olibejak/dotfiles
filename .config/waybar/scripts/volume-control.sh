@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+TARGET_SINK=$(pactl get-default-sink)
+if [[ "$TARGET_SINK" == *"easyeffects_sink"* ]]; then
+  TARGET_SINK=$(pactl list short sinks | grep -v "easyeffects_sink" | head -n 1 | awk '{print $2}')
+fi
+
 # Define functions
 print_error() {
   cat <<"EOF"
@@ -17,8 +22,8 @@ EOF
 }
 
 icon() {
-  vol=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//')
-  mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
+  vol=$(pactl get-sink-volume "$TARGET_SINK" | awk '{print $5}' | sed 's/%//')
+  mute=$(pactl get-sink-mute "$TARGET_SINK" | awk '{print $2}')
 
   if [ "$mute" = "yes" ] || [ "$vol" -eq 0 ]; then
     icon="volume-level-muted"
@@ -37,7 +42,7 @@ send_notification() {
 }
 
 notify_mute() {
-  mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
+  mute=$(pactl get-sink-mute "$TARGET_SINK" | awk '{print $2}')
   if [ "$mute" = "yes" ]; then
     notify-send -a "state" -r 91190 -i "volume-level-muted" "Volume: Muted" -u low
   else
@@ -50,19 +55,19 @@ action_volume() {
   case "${1}" in
   i)
     # Increase volume if below 100
-    current_vol=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//')
+    current_vol=$(pactl get-sink-volume "$TARGET_SINK" | awk '{print $5}' | sed 's/%//')
     if [ "$current_vol" -lt 100 ]; then
       new_vol=$((current_vol + 2))
       [ "$new_vol" -gt 100 ] && new_vol=100
-      pactl set-sink-volume @DEFAULT_SINK@ "${new_vol}%"
+      pactl set-sink-volume "$TARGET_SINK" "${new_vol}%"
     fi
     ;;
   d)
     # Decrease volume if above 0
-    current_vol=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | sed 's/%//')
+    current_vol=$(pactl get-sink-volume "$TARGET_SINK" | awk '{print $5}' | sed 's/%//')
     new_vol=$((current_vol - 2))
     [ "$new_vol" -lt 0 ] && new_vol=0
-    pactl set-sink-volume @DEFAULT_SINK@ "${new_vol}%"
+    pactl set-sink-volume "$TARGET_SINK" "${new_vol}%"
     ;;
   esac
 }
@@ -77,7 +82,7 @@ select_output() {
       notify-send -r 91190 "Error activating $desc"
     fi
   else
-    pactl list sinks | grep -ie "Description:" | awk -F ': ' '{print $2}' | sort
+    pactl list sinks | grep -ie "Description:" | awk -F ': ' '{print $2}' | grep -v "EasyEffects" | sort
   fi
 }
 
@@ -116,7 +121,7 @@ shift $((OPTIND - 1))
 case "${1}" in
 i) action_volume i ;;
 d) action_volume d ;;
-m) pactl set-sink-mute @DEFAULT_SINK@ toggle && notify_mute && exit 0 ;;
+m) pactl set-sink-mute "$TARGET_SINK" toggle && notify_mute && exit 0 ;;
 *) print_error ;;
 esac
 

@@ -4,7 +4,7 @@
 # GitHub: https://github.com/sejjy/mechabar
 
 # Rofi config
-config="$HOME/.config/rofi/bluetooth-menu.rasi"
+config="$HOME/.config/rofi/config.rasi"
 
 # Rofi window override
 override_disabled="mainbox { children: [ textbox-custom, listview ]; } listview { lines: 1; padding: 6px 6px 8px; }"
@@ -74,7 +74,7 @@ while true; do
     ;;
   *"Scan for devices")
     notify-send "Press '?' to show help." -i "package-installed-outdated"
-    kitty --title '󰂱  Bluetooth TUI' bash -c "bluetui" # Launch bluetui
+    ghostty --title '󰂱  Bluetooth TUI' bash -c "bluetui" # Launch bluetui
     ;;
   *)
     # Extract device name

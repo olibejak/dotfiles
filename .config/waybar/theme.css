@@ -1,83 +1,56 @@
-/* Evangelion Neon Genesis */
+/* Vibrant Synthwave Neon Night Drive */
 
-@define-color bg0_h           #101010;
-@define-color bg0             #181818;
-@define-color bg1             #202020;
-@define-color bg2             #2a2a2a;
-@define-color bg3             #333333;
-@define-color bg4             #444444;
+/* Background */
+@define-color bg0             #000000;
+@define-color bg1             #2B2B2B;
+@define-color bg2             #4B0082;
+@define-color bg3             #8B00FF;
 
-@define-color gray            #888888;
-@define-color fg4             #aaaaaa;
-@define-color fg3             #cccccc;
-@define-color fg2             #dddddd;
-@define-color fg1             #eeeeee;
-@define-color fg0             #ffffff;
+/* Text */
+@define-color fg0             #FAFAFA;
+@define-color fg-black        #000000;
+@define-color fg-white        #FFFFFF;
 
-@define-color red             #ff003c;   /* Evangelion alert red */
-@define-color bright_red      #ff1a4f;
-
-@define-color green           #5fff5f;   /* Neon green (like Eva-01 glow) */
-@define-color bright_green    #aaffaa;
-
-@define-color yellow          #ffc800;
-@define-color bright_yellow   #ffe066;
-
-@define-color blue            #6fafff;
-@define-color bright_blue     #a2cfff;
-
-@define-color purple          #7f00ff;   /* Eva-01 purple */
-@define-color bright_purple   #a64dff;
-
-@define-color aqua            #00ffd5;
-@define-color bright_aqua     #5ffff8;
-
-@define-color orange          #ff9900;
-@define-color bright_orange   #ffb347;
-
-@define-color white           #ffffff;
-@define-color black           #000000;
-
-/*
-  bg - background
-  fg - foreground
-  br - border
-*/
+/* Accent */
+@define-color bright_pink     #FF007F;
+@define-color pink            #FF1493;
+@define-color cyan            #00FFFF;
+@define-color orange          #FF8C00;
+@define-color purple          #4B0082;
+@define-color bright_purple   #8B00FF;
+@define-color green           #00FF00;
 
 /* Main Colors */
-
 @define-color shadow          shade(@bg0_h, 0.5);
 @define-color main-fg         @fg0;
-@define-color main-bg         @bg0_h;
-@define-color main-br         @bright_purple;
+@define-color main-bg         @bg0;
+@define-color main-br         @cyan;
 
-@define-color active-bg       @bright_green;
-@define-color active-fg       @bg0_h;
+@define-color active-bg       @bright_purple;
+@define-color active-fg       @white;
 
-@define-color hover-bg        @bg2;
-@define-color hover-fg        alpha(@fg0, 0.85);
+@define-color hover-bg        @purple;
+@define-color hover-fg        @white;
 
 /* Module Colors */
-
 @define-color module-fg       @fg0;
 @define-color workspaces      @bg1;
 
-@define-color temperature     @bg2;
-@define-color memory          @bg1;
-@define-color cpu             @bg3;
+@define-color temperature     @orange;
+@define-color memory          @pink;
+@define-color cpu             @bright_purple;
 @define-color distro-fg       @black;
-@define-color distro-bg       @bright_purple;
-@define-color time            @bg3;
+@define-color distro-bg       @cyan;
+@define-color time            @cyan;
 @define-color date            @bg1;
 @define-color tray            @bg0;
 
-@define-color pulseaudio      @bg2;
+@define-color pulseaudio      @green;
 @define-color backlight       @bg1;
-@define-color battery         @bg3;
-@define-color power           @bright_green;
+@define-color battery         @bright_pink;
+@define-color power           @bright_pink;
 
 /* State Colors */
-
-@define-color warning         @bright_orange;
-@define-color critical        @bright_red;
-@define-color charging        @bright_green;
+@define-color warning         @orange;
+@define-color critical        @bright_pink;
+@define-color charging        @green;

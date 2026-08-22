@@ -1,4 +1,4 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+#"$schema" = 'https://starship.rs/config-schema.json'
 
 # Blank line between prompts
 add_newline = true
@@ -9,13 +9,15 @@ format = """$all"""
 # move the rest of the prompt to the right
 right_format = """$cmd_duration$sudo"""
 
+# arch icon: 󰣇
+
 [character]
-success_symbol = '[󰣇](bold blue)'
-error_symbol = '[󰣇](bold red)'
-vimcmd_symbol = '[󰣇](bold green)'
-vimcmd_replace_one_symbol = '[󰣇](bold yellow)'
-vimcmd_replace_symbol = '[󰣇](bold yellow)'
-vimcmd_visual_symbol = '[󰣇](bold purple)'
+success_symbol = '[](#00FF00)'
+error_symbol = '[](#FF007F)'
+vimcmd_symbol = '[](#00FF00)'
+vimcmd_replace_one_symbol = '[](bold yellow)'
+vimcmd_replace_symbol = '[](bold yellow)'
+vimcmd_visual_symbol = '[](bold purple)'
 
 [aws]
 symbol = " "
@@ -216,7 +218,7 @@ symbol = " "
 symbol = " "
 
 [sudo]
-style = 'yellow'
+style = '#FF8C00'
 symbol = '🧙'
 disabled = false
 
