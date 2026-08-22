@@ -1,6 +1,6 @@
 /* Bluetooth menu */
 
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/themes/synthwave.rasi"
 
 configuration {
   font:                     "JetBrainsMono Nerd Font 8";

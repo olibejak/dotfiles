@@ -4,7 +4,7 @@
 # GitHub: https://github.com/sejjy/mechabar
 
 # Rofi config
-config="$HOME/.config/rofi/config.rasi"
+config="$HOME/.config/rofi/bluetooth-menu.rasi"
 
 # Rofi window override
 override_disabled="mainbox { children: [ textbox-custom, listview ]; } listview { lines: 1; padding: 6px 6px 8px; }"
