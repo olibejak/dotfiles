@@ -1,9 +1,0 @@
-[sie][Limiter#0]
-alr=true
-alrAttack=1
-alrKneeSmooth=0
-alrRelease=500
-attack=1
-release=20
-sidechainPreamp=10
-threshold=-2
