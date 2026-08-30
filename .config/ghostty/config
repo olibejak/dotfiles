@@ -27,7 +27,8 @@ background-opacity = 0.85
 # BG Blur
 # background-blur-radius = 20
 
-theme = Hacktober
+#theme = Hacktober
+theme = Synthwave
 # Config syntax crash course
 # ==========================
 # # The config file consists of simple key-value pairs,

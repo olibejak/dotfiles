@@ -1,0 +1,10 @@
+[sie][Gate#0]
+attack=1
+curveThreshold=-25
+hysteresis=true
+hysteresisThreshold=-15
+lpfFrequency=5000
+reduction=-72
+release=500
+sidechainInputDevice=alsa_output.usb-HP_SIMGOT_GEW1_0123456789AB-00.analog-stereo
+sidechainPreamp=5

@@ -1,0 +1,115 @@
+@theme "~/.config/rofi/themes/synthwave.rasi"
+
+* {
+    transparent: rgba(0, 0, 0, 0);
+}
+
+configuration {
+    modi: "drun,run,window,filebrowser";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    window-format: "{w} · {c} · {t}";
+    font: "JetBrainsMono Nerd Font 12";
+    
+    hover-select: true;
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
+    
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    display-filebrowser: "Files";
+}
+
+window {
+    width: 35%;
+    border: 3px;
+    border-radius: 10px;
+    border-color: @main-br;
+    background-color: @main-bg;
+    padding: 15px;
+}
+
+mainbox {
+    spacing: 15px;
+    background-color: @transparent;
+    children: [ inputbar, mode-switcher, listview ];
+}
+
+inputbar {
+    background-color: @input-bg;
+    text-color: @red;
+    border: 1px;
+    border-color: @main-br;
+    border-radius: 8px;
+    padding: 10px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: @transparent;
+    text-color: @red;
+    padding: 0px 10px 0px 0px;
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @red;
+    placeholder: "Search...";
+    placeholder-color: @gray;
+}
+
+mode-switcher {
+    background-color: @transparent;
+    spacing: 10px;
+}
+
+button {
+    padding: 8px;
+    background-color: @input-bg;
+    text-color: @main-fg;
+    border-radius: 8px;
+    border: 1px;
+    border-color: @transparent;
+}
+
+button selected {
+    background-color: @select-bg;
+    text-color: @select-fg;
+    border-color: @select-bg;
+}
+
+listview {
+    background-color: @transparent;
+    columns: 1;
+    lines: 7; 
+    scrollbar: false;
+    spacing: 4px;
+    border: 0px;
+}
+
+element {
+    background-color: @transparent;
+    text-color: @main-fg;
+    padding: 8px;
+    border: 0px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @select-bg;
+    text-color: @select-fg;
+}
+
+element-icon {
+    background-color: inherit;
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+}
