@@ -36,6 +36,7 @@ require('lazy').setup({
   require 'plugins.gitsigns',
   require 'plugins.indent-blankline',
   require 'plugins.surround',
+  require 'plugins.markdown-preview',
 
   {
     -- Detect tabstop and shiftwidth automatically

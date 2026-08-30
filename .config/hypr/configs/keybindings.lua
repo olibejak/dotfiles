@@ -15,11 +15,12 @@ hl.bind(mainMod .. " + Q",         hl.dsp.exec_cmd(vars.terminal))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exit())
 hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(vars.fileManager))
-hl.bind(mainMod .. " + V",         hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + V",         hl.dsp.exec_cmd("sh -c 'cliphist list | rofi -dmenu -p \"Clipboard\" | cliphist decode | wl-copy'"))
 hl.bind(mainMod .. " + D",         hl.dsp.exec_cmd(vars.appMenu))
 hl.bind("ALT + TAB",         hl.dsp.exec_cmd(vars.windowMenu))
 hl.bind(mainMod .. " + R",         hl.dsp.exec_cmd(vars.runMenu))
 hl.bind(mainMod .. " + P",         hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + CTRL + F",  hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F",         hl.dsp.window.fullscreen())
 -- hl.bind(mainMod .. " + B",      hl.dsp.layout("togglesplit")) -- dwindle
 

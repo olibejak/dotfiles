@@ -15,7 +15,8 @@ hl.on("hyprland.start", function ()
     -- Tools and env
     hl.exec_cmd(vars.bar)
     hl.exec_cmd(vars.wallpaper)
-    hl.exec_cmd(vars.clipboard)
+    hl.exec_cmd(vars.text_clipboard)
+    hl.exec_cmd(vars.image_clipboard)
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("easyeffects -w")
     

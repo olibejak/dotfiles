@@ -60,6 +60,7 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #wireplumber,
+#language,
 #custom-power {
   color: @fg0;
   background: transparent;
