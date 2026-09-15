@@ -25,3 +25,13 @@ alias ls='eza --icons=always --group-directories-first'
 alias ll='eza -alh --icons=always --group-directories-first'
 
 export TERM=xterm-256color
+
+# Unity CLI
+case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
+
+# Nargo - Noir package manager
+export NARGO_HOME="$HOME/.nargo"
+export PATH="$PATH:$NARGO_HOME/bin"
+
+# Barretenberg
+export PATH="$HOME/.bb:$PATH"
