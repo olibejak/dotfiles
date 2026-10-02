@@ -23,7 +23,7 @@ hl.config({
         inactive_opacity = 0.95,
         
         blur = {
-            enabled = false,
+            enabled = true,
         },
         
         shadow = {
@@ -71,4 +71,11 @@ hl.config({
         force_default_wallpaper = -1,
         disable_hyprland_logo = false,
     }
+})
+
+hl.layer_rule({
+    name = "glass-clock-widget",
+    match = {namespace = "clock-widget"},
+    blur = true,
+    ignore_alpha = 0.2,
 })
