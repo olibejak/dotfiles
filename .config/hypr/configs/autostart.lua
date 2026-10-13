@@ -19,6 +19,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd(vars.image_clipboard)
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("easyeffects -w")
+    hl.exec_cmd("hypridle")
     
     -- Apps
     hl.exec_cmd(vars.terminal, { move = {0, 1} })

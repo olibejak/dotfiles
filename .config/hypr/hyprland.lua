@@ -44,6 +44,7 @@ require("configs/autostart")
 require("configs/look_and_feel")
 require("configs/input")
 require("configs/keybindings")
+require("configs/app_settings")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----

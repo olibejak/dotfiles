@@ -29,6 +29,9 @@ export TERM=xterm-256color
 # Unity CLI
 case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Nargo - Noir package manager
 export NARGO_HOME="$HOME/.nargo"
 export PATH="$PATH:$NARGO_HOME/bin"
